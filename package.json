@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "clean": "rm -rf dist",
+    "local-storage": "azurite --silent --location azurite --debug azurite/debug.log",
     "build": "tsc",
     "build:verbose": "npm run clean && tsc -b --verbose",
     "watch": "tsc -w",
@@ -12,10 +13,11 @@
     "test": "npx playwright test"
   },
   "dependencies": {
+    "@azure/functions": "^3.0.0",
     "applicationinsights": "^2.3.6"
   },
   "devDependencies": {
-    "@azure/functions": "^3.0.0",
+    "azurite": "^3.20.1",
     "@playwright/test": "^1.27.1",
     "@types/node": "^16.18.3",
     "azure-functions-core-tools": "^4.0.4829",
