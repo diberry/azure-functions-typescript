@@ -1,0 +1,19 @@
+{
+	"name": "Node.js & TypeScript",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:14",
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [7071],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "npm install && npm install -g azure-functions-core-tools",
+
+	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node",
+
+	// Turn off Azure Function Core Tools anonymous telemetry collection
+	"containerEnv": {
+		"FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT":1
+	}
+
+}
