@@ -1,3 +1,3 @@
 export const CONFIG = {
-    appInsightsKey: process.env.APPINSIGHTS_INSTRUMENTATIONKEY
+    environment: process.env.NODE_ENV,
 }

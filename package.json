@@ -4,18 +4,20 @@
   "description": "",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc",
+    "build": "tsc",
+    "build:verbose": "npm run clean && tsc -b --verbose",
     "watch": "tsc -w",
-    "prestart": "npm run build",
+    "prestart": "npm run build:verbose",
     "start": "func start",
-    "test": "echo \"No tests yet...\""
+    "test": "npx playwright test"
   },
   "dependencies": {
     "applicationinsights": "^2.3.6"
   },
   "devDependencies": {
     "@azure/functions": "^3.0.0",
-    "@types/node": "16.x",
+    "@playwright/test": "^1.27.1",
+    "@types/node": "^16.18.3",
     "azure-functions-core-tools": "^4.0.4829",
     "typescript": "^4.0.0"
   }
